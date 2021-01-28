@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;900&display=swap");
+*, *::after, *::before { box-sizing: border-box;}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.conteiner {
+  align-items: center;
+  background: #b8bedd;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+  position: relative;
+  padding: 20px;
+  width: 300px;
+}
+
+.counter {
+	font-size: 21px;
+ }
+
+
+ #clicker {
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.55);
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 35px;
+	height: 100px;
+	outline: none;
+	width: 100px;
+	background: #0077b6;
+ }
+
+ #clicker:active {
+	box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.55) inset;
+ }
+
+
+#timer {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+#message {
+  align-items: center;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#message.message--failed,
+#message.message--success {
+	display: flex;
+}
+
+#message span {
+	display: none;
+}
+
+#message.message--success {background: #57cc99;}
+#message.message--success span.text-win {display: block;}
+
+#message.message--failed {background: #ff5d8f;}
+#message.message--failed span.text-lose {display: block;}
+
+
+#message span {
+  color: #eef4ed;
+  font-size: 35px;
+  font-weight: bold; 
+}

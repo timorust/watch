@@ -35,10 +35,6 @@ const init = ($event) => {
 	
 }
 
-
-
-
-
 const cntDounTimeAndLose = () => {
 	timerCnt--;
 	$timer.innerHTML = timerCnt;
@@ -46,9 +42,13 @@ const cntDounTimeAndLose = () => {
 }
 
 const cntUpClicksAndWin = () => {
-	clicksCnt++;  
+   if($container.classList.contains('started')) {
+		clicksCnt++;  
 	$counterNumber.innerHTML = clicksCnt; 
    checkGameStatus();
+	}else {
+		alert('You must start the game!');
+	}
 }
 
 const stopGame = () => {

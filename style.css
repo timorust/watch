@@ -12,7 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.conteiner {
+#container {
   align-items: center;
   background: #b8bedd;
   display: flex;
@@ -22,6 +22,10 @@ body {
   position: relative;
   padding: 20px;
   width: 300px;
+}
+
+#container.started button#start {
+display: none;
 }
 
 .counter {
@@ -55,6 +59,7 @@ body {
   align-items: center;
   bottom: 0;
   display: none;
+  flex-direction: column;
   justify-content: center;
   left: 0;
   position: absolute;
@@ -69,6 +74,9 @@ body {
 
 #message span {
 	display: none;
+	color: #eef4ed;
+	font-size: 35px;
+	font-weight: bold; 
 }
 
 #message.message--success {background: #57cc99;}
@@ -76,10 +84,3 @@ body {
 
 #message.message--failed {background: #ff5d8f;}
 #message.message--failed span.text-lose {display: block;}
-
-
-#message span {
-  color: #eef4ed;
-  font-size: 35px;
-  font-weight: bold; 
-}
